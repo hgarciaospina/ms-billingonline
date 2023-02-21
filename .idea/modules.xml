@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service/onlinestore.admin-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-service/onlinestore.config-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-service/onlinestore.config-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-service/onlinestore.config-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/config-service/onlinestore.config-service.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/customer-service/onlinestore.customer-service.iml" filepath="$PROJECT_DIR$/.idea/modules/customer-service/onlinestore.customer-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/customer-service/onlinestore.customer-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/customer-service/onlinestore.customer-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-service/onlinestore.gateway-service.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.iml" filepath="$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/registry-service/onlinestore.registry-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/registry-service/onlinestore.registry-service.main.iml" />

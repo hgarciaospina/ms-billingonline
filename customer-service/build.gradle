@@ -31,8 +31,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-//	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.2.1'
+
+	implementation group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.7.6'
+
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    testImplementation 'org.testng:testng:7.1.0'
+	testImplementation 'junit:junit:4.13.1'
+	testImplementation 'junit:junit:4.13.1'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
