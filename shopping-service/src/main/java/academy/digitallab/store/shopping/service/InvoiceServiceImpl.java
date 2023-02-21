@@ -8,28 +8,22 @@ import academy.digitallab.store.shopping.model.Product;
 import academy.digitallab.store.shopping.repository.InvoiceItemsRepository;
 import academy.digitallab.store.shopping.repository.InvoiceRepository;
 import academy.digitallab.store.shopping.entity.Invoice;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 @Slf4j
 @Service
 public class InvoiceServiceImpl implements InvoiceService {
-
-    @Autowired
-    InvoiceRepository invoiceRepository;
-
-    @Autowired
-    InvoiceItemsRepository invoiceItemsRepository;
-    @Autowired
-    CustomerClient customerClient;
-
-    @Autowired
-    ProductClient productClient;
+    final InvoiceRepository invoiceRepository;
+    final InvoiceItemsRepository invoiceItemsRepository;
+    final CustomerClient customerClient;
+    final ProductClient productClient;
 
     @Override
     public List<Invoice> findInvoiceAll() {
@@ -45,9 +39,7 @@ public class InvoiceServiceImpl implements InvoiceService {
         }
         invoice.setState("CREATED");
         invoiceDB = invoiceRepository.save(invoice);
-        invoiceDB.getItems().forEach( invoiceItem -> {
-            productClient.updateStockProduct( invoiceItem.getProductId(), invoiceItem.getQuantity() * -1);
-        });
+        invoiceDB.getItems().forEach( invoiceItem -> productClient.updateStockProduct( invoiceItem.getProductId(), invoiceItem.getQuantity() * -1));
 
         return invoiceDB;
     }
