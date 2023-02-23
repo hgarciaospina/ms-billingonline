@@ -42,8 +42,7 @@ management:
   # Security
   # Variable que se usa para la firma de seguridad
   jwt:
-    secret:
-      secret
+    secret: secret
   
   #tiempo de expiración serial (12 horas) tiempo en seg
     expiration:

@@ -10,17 +10,38 @@ sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation platform('org.springframework.cloud:spring-cloud-dependencies:2021.0.0')
 	implementation 'org.hibernate.validator:hibernate-validator:6.1.2.Final'
-	implementation 'org.springframework.boot:spring-boot-starter-security:2.3.1.RELEASE'
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	implementation group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.7.6'
+
+	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:3.1.6'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+
+
+
+
+
+
+
+
+
+
 }
 
 tasks.named('test') {

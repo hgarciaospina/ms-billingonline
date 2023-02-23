@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/product-service/onlinestore.product-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/registry-service/onlinestore.registry-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/registry-service/onlinestore.registry-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shopping-service/onlinestore.shopping-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/shopping-service/onlinestore.shopping-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/security-service.main.iml" />
     </modules>
   </component>
 </project>
