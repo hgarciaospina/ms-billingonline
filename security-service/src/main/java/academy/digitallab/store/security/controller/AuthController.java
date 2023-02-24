@@ -1,16 +1,16 @@
 package academy.digitallab.store.security.controller;
 
-import academy.digitallab.store.security.dto.LoginUsuario;
-import academy.digitallab.store.security.jwt.JwtProvider;
-import academy.digitallab.store.security.service.RolService;
 import academy.digitallab.store.security.dto.JwtDto;
+import academy.digitallab.store.security.dto.LoginUsuario;
 import academy.digitallab.store.security.dto.Mensaje;
 import academy.digitallab.store.security.dto.NuevoUsuario;
 import academy.digitallab.store.security.entity.Rol;
 import academy.digitallab.store.security.entity.Usuario;
 import academy.digitallab.store.security.enums.RolNombre;
+import academy.digitallab.store.security.jwt.JwtProvider;
+import academy.digitallab.store.security.service.RolService;
 import academy.digitallab.store.security.service.UsuarioService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,22 +29,13 @@ import java.util.Set;
 @RestController
 @RequestMapping("/auth")
 @CrossOrigin
+@AllArgsConstructor
 public class AuthController {
-
-    @Autowired
-    PasswordEncoder passwordEncoder;
-
-    @Autowired
-    AuthenticationManager authenticationManager;
-
-    @Autowired
-    UsuarioService usuarioService;
-
-    @Autowired
-    RolService rolService;
-
-    @Autowired
-    JwtProvider jwtProvider;
+    final PasswordEncoder passwordEncoder;
+    final AuthenticationManager authenticationManager;
+    final UsuarioService usuarioService;
+    final RolService rolService;
+    final JwtProvider jwtProvider;
 
     //Espera un json y lo convierte a tipo clase NuevoUsuario
     @PostMapping("/nuevoUsuario")
