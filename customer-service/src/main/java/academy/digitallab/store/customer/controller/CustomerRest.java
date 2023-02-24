@@ -1,12 +1,12 @@
 package academy.digitallab.store.customer.controller;
 
-import academy.digitallab.store.customer.service.CustomerService;
 import academy.digitallab.store.customer.repository.entity.Customer;
 import academy.digitallab.store.customer.repository.entity.Region;
+import academy.digitallab.store.customer.service.CustomerService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,16 +22,16 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping("/customers")
+@AllArgsConstructor
 public class CustomerRest {
 
-    @Autowired
-    CustomerService customerService;
+    final CustomerService customerService;
 
     // -------------------Retrieve All Customers--------------------------------------------
 
     @GetMapping
     public ResponseEntity<List<Customer>> listAllCustomers(@RequestParam(name = "regionId" , required = false) Long regionId ) {
-        List<Customer> customers =  new ArrayList<>();
+        List<Customer> customers;
         if (null ==  regionId) {
             customers = customerService.findCustomerAll();
             if (customers.isEmpty()) {
